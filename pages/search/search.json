@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "mp-searchbar": "weui-miniprogram/searchbar/searchbar"
+    },
+    "navigationStyle": "default",
+    "navigationBarTitleText": ""
+}

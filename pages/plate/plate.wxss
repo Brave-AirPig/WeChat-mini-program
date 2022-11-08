@@ -1,0 +1,40 @@
+.plate {
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+}
+
+.plate_lists {
+	text-align: center;
+}
+
+.plate_lists .list {
+	margin: 48rpx 24rpx;
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 12rpx;
+}
+
+.contant {
+	max-height: 90vh;
+	overflow: auto;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	font-size: 24rpx;
+	text-align: center;
+	justify-items: center;
+}
+
+.contant_list {
+	width: 100%;
+}
+
+.contant .img{
+	margin: 48rpx;
+}
+
+.contant .img image {
+	width: 100%;
+}
+
+.list_acive {
+	font-weight: bold;
+}

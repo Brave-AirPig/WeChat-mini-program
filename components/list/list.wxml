@@ -1,0 +1,53 @@
+<view class="select_title">
+      <view class="{{ selectShow == 0 ? 'show_view' : ''}}" bindtap="selectShowFunc" data-idType="0">精选</view>
+      <view class="{{ selectShow == 1 ? 'show_view' : ''}}" bindtap="selectShowFunc" data-idType="1">最新</view>
+      <view class="{{ selectShow == 2 ? 'show_view' : ''}}" bindtap="selectShowFunc" data-idType="2">关注</view>
+</view>
+
+<view wx:for="{{ list }}" wx:key="item.id">
+<view class="list">
+	<view class="people">
+		<view class="prople_img">
+			<image src="{{ item.peopleImg }}" mode="widthFix"></image>
+		</view>
+		<view class="people_text">
+			<text class="title">{{ item.userName }}</text>
+			<text class="cont">{{ item.commentDate }}</text>
+		</view>
+	</view>
+
+	<view class="sel_title">
+		<view class="sel_title_text">精选</view>
+		<view class="sel_title_cont">{{ item.newsTitle }}</view>
+	</view>
+
+	<view class="contant">
+		<text>{{ item.newsContant }}</text>
+	</view>
+
+	<view class="img">
+		<view wx:for="{{ item.img }}" wx:key="index" wx:for-item="myItem">
+			<image src="{{ myItem }}" mode="aspectFill"></image>
+		</view>
+	</view>
+
+	<mp-icon icon="text" color="#f4af0c" type="field"></mp-icon>
+
+	<view class="btn">
+		<view>
+			<mp-icon icon="share" color="#999"></mp-icon>
+			<text>{{ item.share }}</text>
+		</view>
+		<view>
+			<mp-icon icon="comment" color="#999"></mp-icon>
+			<text>{{ item.comment }}</text>
+		</view>
+		<view>
+			<mp-icon icon="star" color="#999"></mp-icon>
+			<text>{{ item.likeNum }}</text>
+		</view>
+	</view>
+</view>
+
+<view class="hr"></view>
+</view>

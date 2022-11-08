@@ -1,0 +1,118 @@
+/* 中间按钮 */
+.btn_img_box {
+  position: fixed;
+  bottom: 27.5px;
+  left: 50%;
+  transform: translate(-50%,0);
+  height: 55px;
+  width: 55px;
+}
+
+/* tabbar */
+.tab-bar {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: #000;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar :nth-of-type(3) {
+  margin-left: 150rpx;
+}
+
+.tab-bar-item image {
+  height: 100%;
+  margin: 10rpx 0;
+}
+
+.tab-bar-item view {
+  font-size: 10px;
+  margin-bottom: 10rpx;
+}
+
+.tab-bar-border_left,
+.tab-bar-border_right {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-top: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+}
+
+.tab-bar-border_left {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.tab-bar-border_right {
+  right: 0;
+  transform: rotate(270deg);
+}
+
+/* 动态类 */
+
+.tab-bar-border_left_show,
+.tab-bar-border_right_show {
+  border-bottom: 8px solid #999;
+  border-right: 8px solid #999;
+}
+
+.btn_img_box .btn_img {
+  height: 100%;
+  width: 100%;
+}
+
+/* 多功能 */
+.show_state {
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: fixed;
+  bottom: 54px;
+  left: 0;
+  height: 180px;
+  width: 100vw;
+  text-align: center;
+  z-index: -99;
+  background-image: linear-gradient( to top, #999,transparent);
+}
+
+.show_state view {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 24rpx;
+  color: #f4af0c;
+  margin-top: 54px;
+}
+
+.show_state view text {
+  align-self: flex-start;
+}
+
+.show_state image {
+  width: 45%;
+  height: 45%;
+  background-color: rgba(244, 174, 11, 0.6);
+  padding: 12rpx;
+  border-radius: 12rpx;
+}

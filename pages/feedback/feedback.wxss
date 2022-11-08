@@ -1,0 +1,23 @@
+.feedback {
+	margin: 24rpx;
+}
+
+.textarea {
+	height: 50vh;
+	min-width: 87vw;
+	padding: 24rpx;
+	border-radius: 24rpx;
+	background-color: #efefef;
+	color: #404040;
+	overflow: auto;
+}
+
+/* 按钮 */
+.btn {
+	background-color: #f4af0c;
+	text-align: center;
+	padding: 24rpx 0; 
+	margin: 24rpx 0;
+	border-radius: 24rpx;
+	color: #fff;
+}

@@ -1,0 +1,19 @@
+.lists {
+	height: 100vh;
+	overflow: auto;
+}
+
+.image_box {
+	column-count: 2;
+	column-gap: 0;
+	padding-bottom: 300rpx;
+}
+
+.lists .list {
+	margin: 24rpx 32rpx;
+}
+
+image {
+	width: 100%;
+	border-radius: 24rpx;
+}

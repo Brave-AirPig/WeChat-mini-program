@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "select-list":"/components/list/list"
+    },
+    "navigationStyle": "default",
+    "navigationBarTitleText": "帖子"
+}

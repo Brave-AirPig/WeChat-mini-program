@@ -1,0 +1,4 @@
+<view>
+	<mp-searchbar placeholder="搜索星球相关" bindclear="ddd" bindblur="blur"></mp-searchbar>
+	<view class="tips" wx:if="{{ value }}">没有搜索到 ‘ {{ value }} ’ 关键字</view>
+</view>

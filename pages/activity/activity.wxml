@@ -1,0 +1,24 @@
+<view wx:for="{{ list }}" wx:key="item.id">
+<view class="hr"></view>
+<view class="active">
+	<view class="title">
+		<mp-icon type="field" icon="photo-wall" color="#f4af0c" size="{{25}}"></mp-icon>
+		<view>{{ item.newsTitle }}</view>
+	</view>
+
+	<image src="{{ item.img }}" mode="widthFix"></image>
+
+	<view class="message">
+		<view class="message_data">
+			<mp-icon icon="comment" color="#f4af0c" size="{{18}}"></mp-icon>
+			<view>{{ item.see }}</view>
+		</view>
+		<view class="message_data">
+			<mp-icon icon="star" color="#f4af0c" size="{{18}}"></mp-icon>
+			<view>{{ item.comment }}</view>
+		</view>
+	</view>
+</view>
+</view>
+
+<view class="tips">更多活动  敬请期待 ...</view>

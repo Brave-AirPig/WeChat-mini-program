@@ -1,0 +1,7 @@
+<!-- 自定义顶部栏 -->
+<view class="nav-bar" style="height:{{ navBarHeight }}px;">
+    <input class="navColor search" bindtap="navTo" placeholder="探索星球" style="height:{{ menuHeight }}px; min-height:{{ menuHeight }}px;line-height:{{ menuHeight }}px; left:{{ menuRight }}px; top:{{ menuTop }}px;"></input>
+</view>
+
+<!-- 占位，高度与顶部栏一样 -->
+<view style="height:{{ navBarHeight }}px;"></view>

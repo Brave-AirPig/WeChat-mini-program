@@ -1,0 +1,146 @@
+
+/* 选项列表 */
+.select_list {
+	padding: 24rpx 0;
+	padding-bottom: 100px;
+}
+
+.select_title {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	padding: 24rpx;
+	padding-bottom: 0;
+	border-bottom: 1px solid #efefef;
+}
+
+.select_title view {
+	padding-bottom: 12rpx;
+}
+
+.select_title .show_view {
+	font-weight: bold;
+	border-bottom: 4px solid #000;
+}
+
+/* 列表 */
+
+.list {
+	padding: 24rpx;
+	padding-top: 48rpx;
+}
+
+.list .people{
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+}
+
+.people .prople_img {
+	margin-right: 92rpx;
+}
+.people image {
+	width: 100%;
+}
+
+.people_text {
+	display: grid;
+	grid-template-rows: repeat(2,1fr);
+	align-items: center;
+}
+
+.people_text .title {
+	font-weight: bold;
+	font-size: 32rpx;
+}
+
+.people .cont {
+	font-size: 24rpx;
+	color: #404040;
+}
+
+/* 精选 */
+.sel_title {
+	display: grid;
+	grid-template-columns: 2fr 8fr;
+	align-items: center;
+	margin: 12rpx 0;
+	margin-top: 32rpx;
+}
+
+.sel_title .sel_title_text {
+	width: 48rpx;
+	display: inline-block;
+	border: 2px solid #f4af0c;
+	border-left: 5px solid #f4af0c;
+	border-right: 5px solid #f4af0c;
+	color: #f4af0c;
+	margin: 12rpx 0;
+	padding: 3rpx 12rpx;
+	border-radius: 5px;
+	font-size: 24rpx;
+}
+
+.sel_title_cont {
+	column-rule: #404040;
+	font-weight: bold;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+/* 内容 */
+.contant {
+	font-size: 24rpx;
+	color: #666;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:3;
+	overflow: hidden;
+	word-break: break-all;
+	text-overflow: ellipsis;
+}
+
+/* 图片 */
+.img {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 12rpx;
+	margin: 24rpx 0;
+}
+
+.img view {
+	height: 200rpx;
+}
+
+.img image{
+	width: 100%;
+	height: 100%;
+}
+
+/* 按钮 */
+.btn {
+	margin: 24rpx 0;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	justify-items: center;
+	align-items: center;
+}
+
+.btn view {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	justify-items: center;
+	align-items: center;
+}
+
+.btn text {
+	display: inline-block;
+	margin-left: 12rpx;
+	color: #666;
+}
+
+.hr {
+	width: 100vw;
+	height: 24rpx;
+	background-color: #EAF8FF;
+}

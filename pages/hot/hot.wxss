@@ -1,0 +1,42 @@
+image {
+	width: 100%;
+}
+
+.hr {
+	width: 100vw;
+	height: 24rpx;
+	background-color: #EAF8FF;
+}
+
+.hot {
+	margin: 32rpx;
+}
+
+.title {
+	margin: 24rpx 0;
+	font-size: 32rpx;
+	font-weight: bold;
+}
+
+.hot_message {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	align-items: center;
+	margin: 24rpx 0;
+	padding-bottom: 24rpx;
+}
+
+.hot_message .time,
+.hot_message .hot_data {
+	color: #666;
+	font-size: 24rpx;
+}
+
+.hot_message .hot_data {
+	justify-self: end;
+}
+
+.text_num {
+	display: inline-block;
+	margin-left: 6rpx;
+}

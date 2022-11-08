@@ -1,0 +1,137 @@
+@import "../../miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss";
+
+.top_img {
+	width: 100vw;
+}
+
+.hr {
+	width: 100%;
+}
+
+.hr_rev {
+	width: 100%;
+	transform: rotate(180deg);
+}
+
+/* 用户头像 */
+.user_img {
+	width: 100vw;
+	height: 48rpx;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+
+.user_img .img {
+	margin: 150rpx;
+	margin-top: -150rpx;
+	margin-left: 48rpx;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+
+.user_img .img image {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.user_img .text {
+	height: 32rpx;
+	line-height: 32rpx;
+	justify-self: end;
+	padding: 6rpx 12rpx;
+	margin: 0 24rpx;
+	border: 2px solid #f4af0c;
+	border-radius: 12rpx;
+	font-size: 24rpx;
+	color: #f4af0c;
+}
+
+/* 用户名 */
+.user_name {
+	margin: 32rpx 24rpx;
+}
+
+.user_name view {
+	font-weight: bold;
+	font-size: 40rpx;
+	margin: 24rpx;
+	margin-bottom: 0;
+}
+
+.user_name text {
+	margin-left: 24rpx;
+	font-size: 24rpx;
+	color: #666;
+}
+
+/* 用户信息 */
+.user_message {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	padding: 24rpx 0;
+	justify-items: center;
+	text-align: center;
+}
+
+.user_message text {
+	color: #999;
+}
+
+/* 数据模块 */
+.database {
+	margin: 24rpx;
+	padding-bottom: 150rpx;
+}
+
+.data_title {
+	margin-bottom: 32rpx;
+}
+
+.database text {
+	font-size: 24rpx;
+	color: #666;
+}
+
+.database .title {
+	font-size: 40rpx;
+	font-weight: bold;
+	margin-right: 48rpx;
+	color: #000;
+}
+
+.database .data,
+.database .medal {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	align-items: center;
+}
+
+.data .title,
+.medal .title {
+	font-size: 28rpx;
+}
+
+.data .more,
+.medal .more {
+	font-size: 24rpx;
+	color: #666;
+	justify-self: end;
+}
+
+/* 进度条 */
+.data_progress {
+	margin: 32rpx 0;
+	color: #666;
+}
+
+.tips {
+	margin: 32rpx 0;
+	text-align: center;
+}
+
+/* 登录按钮 */
+.login_btn {
+	margin-top: 24rpx;
+	background-color: #f4af0c;
+	color: #fff;
+}

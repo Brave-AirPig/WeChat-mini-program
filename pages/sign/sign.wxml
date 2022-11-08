@@ -1,0 +1,8 @@
+<view class="sign">
+	<view class="title">
+		<view><text>胶囊 ⚡ </text> 充电站</view>
+		<view class="sign_data">已持续签到 <text>{{ signDate }}</text> 天</view>
+	</view>
+	<progress class="progress" active-mode="forwards" active color="#f4af0c" percent="{{ percent }}" border-radius="92rpx" stroke-width="92rpx"></progress>
+	<button class="btn" disabled="{{ disabled }}" bindtap="signAdd">点击签到</button>
+</view>

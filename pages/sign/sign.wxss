@@ -1,0 +1,38 @@
+.sign {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: repeat(3,1fr);
+	background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+	background-blend-mode: multiply,multiply;
+	color: #ffffff;
+	text-align: center;
+}
+
+.title {
+	font-size: 64rpx;
+	padding: 92rpx 0;
+}
+
+.title text {
+	color: #f4af0c;
+	font-weight: bold;
+	font-style: oblique;
+	text-shadow: 1px 1px 2px #f4af0c;
+}
+
+.sign_data {
+	padding-top: 24rpx;
+	font-size: 32rpx;
+}
+
+/* 进度条 */
+.progress {
+	margin: 0 48rpx;
+}
+
+.btn {
+	height: 80rpx;
+	background-color: #efefef;
+	color: #f4af0c;
+	box-shadow: 1px 1px 2px #f4af0c;
+}

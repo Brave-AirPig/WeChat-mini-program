@@ -1,0 +1,9 @@
+<navigation-bar></navigation-bar>
+
+<scroll-view class="lists" scroll-y lower-threshold="10" bindscrolltolower="getOnBottom">
+	<view class="image_box">
+		<view class="list" wx:for="{{ imgList }}" wx:key="item.id">
+			<image src="{{ item.img }}" mode="widthFix"></image>
+		</view>
+	</view>
+</scroll-view>

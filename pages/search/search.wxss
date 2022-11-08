@@ -1,0 +1,7 @@
+@import "../../miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss";
+
+.tips {
+	text-align: center;
+	color: #666;
+	margin: 48rpx;
+}

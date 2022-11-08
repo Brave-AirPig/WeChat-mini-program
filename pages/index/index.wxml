@@ -1,0 +1,84 @@
+<navigation-bar></navigation-bar>
+<view>
+	
+  <!-- 背景高斯模糊效果 -->
+  <view class="index_bg_box">
+    <image class="bg_img" src="../../images/swiper/{{ imgNum }}.jpg" mode="widthFix"></image>
+    <view class="style_box"></view>
+  </view>
+
+  <!-- 轮播图 -->
+	<swiper  autoplay="true" interval="5000" duration="500" indicator-color="#999" indicator-active-color="#fff" circular="true" bindchange="swiperFunc">
+    <block wx:for="{{ swiperList }}" wx:key="item.id">
+      <swiper-item>
+        <view class="swiper-item">
+			    <image src="{{ item.url }}" mode="aspectFill"></image>
+			  </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 自定义轮播图指针 -->
+  <view class="strip_box">
+    <view class="{{ imgNum == item.id ? 'strip strip_av' : 'strip' }}" wx:for="{{ swiperList }}" wx:key="item.id"></view>
+  </view>
+
+  <!-- 剩余所有功能盒子 -->
+  <view class="container">           
+  
+  <!-- 选项卡 -->
+  <view class="control">
+    <view class="control_little">
+      <view class="img_box" bindtap="navTo" data-path="/pages/sign/sign">
+        <image src="../../images/sign.png" mode="widthFix"></image>
+      </view>
+      <text>每日签到</text>
+    </view>
+    <view class="control_little">
+      <view class="img_box" bindtap="navTo" data-path="/pages/hot/hot">
+        <image src="../../images/hot.png" mode="widthFix"></image>
+      </view>
+      <text>热门精选</text>
+    </view>
+    <view class="control_little">
+      <view class="img_box" bindtap="navTo" data-path="/pages/activity/activity">
+        <image src="../../images/active.png" mode="widthFix"></image>
+    </view>
+      <text>活动专区</text>
+    </view>
+    <view class="control_little">
+      <view class="img_box" bindtap="navTo" data-path="/pages/feedback/feedback">
+        <image src="../../images/feed.png" mode="widthFix"></image>
+      </view>
+      <text>意见反馈</text>
+    </view>
+  </view>
+
+  <image class="hr" src="../../images/hr3.png" mode="widthFix"></image>
+
+  <!-- 热门话题 -->
+  <view class="hot_say">
+    <view class="title">
+      <text class="title_text">热门话题</text>
+      <text class="title_more" bindtap="navTo" data-path="/pages/hot/hot">更多 ></text>
+    </view>
+
+    <view class="hot_list">
+      <view class="list_box" wx:for="{{ hotNewsList }}" wx:key="item.id">
+        <text>#  🎖️ {{ item.newsTitle }}</text>
+      </view>
+    </view>
+  </view>
+
+  <image class="hr_rev" src="../../images/hr3.png" mode="widthFix"></image>
+
+  <!-- 切换列表 -->
+  <view class="select_list">
+    <select-list></select-list>
+  </view>
+
+
+  </view>
+</view>
+
+  

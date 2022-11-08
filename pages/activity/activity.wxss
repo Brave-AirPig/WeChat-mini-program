@@ -1,0 +1,39 @@
+.hr {
+	width: 100vw;
+	height: 24rpx;
+	background-color: #EAF8FF;
+}
+
+image {
+	width: 100%;
+	border-radius: 12rpx;
+}
+
+.active {
+	margin: 24rpx;
+}
+
+.title {
+	font-weight: bold;
+	display: grid;
+	grid-template-columns: 1fr 9fr;
+	margin: 24rpx 0;
+}
+
+.message,
+.message_data {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	width: 15vw;
+	margin: 12rpx 0;
+	align-items: center;
+	color: #666;
+	font-size: 28rpx;
+}
+
+.tips {
+	text-align: center;
+	padding: 32rpx;
+	color: #666;
+	font-size: 26rpx;
+}

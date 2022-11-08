@@ -1,0 +1,69 @@
+<image class="top_img" src="{{ backImg }}" mode="widthFix"></image>
+<image class="hr" src="../../images/hr3.png" mode="widthFix"></image>
+
+<!-- 用户信息 -->
+<view class="user">
+	
+	<view class="user_img">
+		<view class="img">
+			<image src="{{ avatarUrl }}" mode="widthFix"></image>
+		</view>
+		<view class="text">
+			<mp-icon icon="pencil" color="#f4af0c" size="{{ 18 }}"></mp-icon>
+			<text bindtap="choImg"> 设置背景</text>
+		</view>
+	</view>
+
+	<view class="user_name">
+		<view>{{ username }}</view>
+		<text>这个人很懒什么都没有留下</text>
+	</view>
+
+	<view class="user_message">
+		<view>
+			<view>关注</view>
+			<text>{{ userdata.concern }}</text>
+		</view>
+		<view>
+			<view>粉丝</view>
+			<text>{{ userdata.fans }}</text>
+		</view>
+		<view>
+			<view>获赞</view>
+			<text>{{ userdata.like }}</text>
+		</view>
+		<view>
+			<view>积分</view>
+			<text>{{ userdata.integral }}</text>
+		</view>
+	</view>
+</view>
+
+<image class="hr_rev" src="../../images/hr3.png" mode="widthFix"></image>
+
+<!-- 数据模块 -->
+<view class="database" wx:if="{{ usershow }}">
+	<view class="data_title">
+		<text class="title">酷客空间</text>
+		<text>发布热文可以祝你快速升级哦</text>
+	</view>
+
+	<view class="data">
+		<view class="title">我的等级 : {{ userdata.plan }}</view>
+		<view class="more">更多 ></view>
+	</view>
+
+	<view class="data_progress">
+		<progress percent="{{ userdata.plan }}" border-radius="12rpx" stroke-width="18rpx" color="#f4af0c" active></progress>
+	</view>
+
+	<view class="medal">
+		<view class="title">我的勋章</view>
+		<view class="more">更多 ></view>
+	</view>
+
+	<view class="tips">您还未获得勋章</view>
+</view>
+
+<!-- 用户登录 -->
+<button class="login_btn" open-type="getUserInfo" bindtap="getUserInfo"  wx:if="{{ !usershow }}">点击登录（授权）</button>

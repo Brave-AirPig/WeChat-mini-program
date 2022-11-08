@@ -1,0 +1,16 @@
+<view wx:for="{{ list }}" wx:key="item.id">
+<view class="hr"></view>
+<view class="hot">
+	<image src="{{ item.img }}" mode="widthFix"></image>
+	
+	<view class="title">{{ item.newsTitle }}</view>
+
+	<view class="hot_message">
+		<text class="time">{{ item.Date }}</text>
+		<view class="hot_data">
+			<text>👁️‍🗨️</text>
+			<text class="text_num">{{ item.see }}</text>
+		</view>
+	</view>
+</view>
+</view>

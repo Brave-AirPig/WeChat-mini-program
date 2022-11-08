@@ -1,0 +1,7 @@
+<view class="feedback">
+<form action="" bindsubmit="formSubmit">
+	<textarea class="textarea" placeholder="意见反馈 (限制5000字)" maxlength="5000" name="feedback"></textarea>
+
+<button class="btn" formType="submit" style="width: 90vw;">提交反馈</button>
+</form>
+</view>

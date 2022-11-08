@@ -1,0 +1,18 @@
+<navigation-bar></navigation-bar>
+<view class="plate">
+	<view class="plate_lists">
+		<view class="{{ acive == 0 ? 'list list_acive' : 'list'}}" bindtap="aciveFunc" data-type="0">程序员星球</view>
+		<view class="{{ acive == 1 ? 'list list_acive' : 'list'}}" bindtap="aciveFunc" data-type="1">金融星球</view>
+		<view class="{{ acive == 2 ? 'list list_acive' : 'list'}}" bindtap="aciveFunc" data-type="2">其他星球</view>
+	</view>
+
+	<view class="contant">
+		<view class="contant_list" wx:for="{{ programmingList }}" wx:key="item.id">
+			<view class="img">
+				<image src="{{ item.img }}" mode="widthFix"></image>
+			</view>
+			<text>{{ item.appType }}</text>
+		</view>
+	</view>
+</view>
+

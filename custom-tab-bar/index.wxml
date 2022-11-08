@@ -1,0 +1,34 @@
+<!-- 中间多选项按钮 -->
+<cover-view class="btn_img_box">
+  <cover-image class="btn_img" src="{{ btn_show ? '../images/KMD_no.png' : '../images/KMD.png' }}" bindtap="btnSwitch"></cover-image>
+</cover-view>
+
+<view class="tab-bar">
+
+  <!-- 循环TabBar列表项 -->
+  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}" mode="heightFix"></image>
+    <view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+  </view>
+
+  <!-- 三角设计 -->
+  <view class="'tab-bar-border_left' + {{  btn_show ? 'tab-bar-border_left_show' : ''  }}"></view>
+  <view class="'tab-bar-border_right' + {{  btn_show ? 'tab-bar-border_right_show' : ''  }}"></view>
+
+</view>
+
+<!-- 跳出功能选项 -->
+<view class="show_state" wx:if="{{ btn_show }}">
+  <view class="left_state" bindtap="navto" data-path="/pages/postPage/post">
+    <image src="../images/text.png" mode="heightFix"></image>
+    <text>帖子</text>
+  </view>
+
+  <view class="right_state" bindtap="navto" data-path="/pages/feedback/feedback">
+    <image src="../images/feedback.png" mode="heightFix"></image>
+    <text>问题/需求反馈</text>
+  </view>
+</view>
+
+
+
