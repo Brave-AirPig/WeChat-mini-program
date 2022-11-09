@@ -1,6 +1,10 @@
 # 《胶囊星球》微信小程序项目 🦄
 
+<<<<<<< HEAD
 [](https://img.shields.io/badge/%20%F0%9F%A6%84%20%20WeChat--mini--program%20%20-%20%20develop%20%20-orange)
+=======
+![](https://img.shields.io/badge/%20%F0%9F%A6%84%20%20WeChat--mini--program%20%20-%20%20develop%20%20-orange)
+>>>>>>> 05f0d04c7aeb40eecc5159471e71908f1d5bd071
 
 ## 项目背景
 
