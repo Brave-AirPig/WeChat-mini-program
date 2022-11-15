@@ -1,9 +1,3 @@
-<view class="select_title">
-      <view class="{{ selectShow == 0 ? 'show_view' : ''}}" bindtap="selectShowFunc" data-idType="0">精选</view>
-      <view class="{{ selectShow == 1 ? 'show_view' : ''}}" bindtap="selectShowFunc" data-idType="1">最新</view>
-      <view class="{{ selectShow == 2 ? 'show_view' : ''}}" bindtap="selectShowFunc" data-idType="2">关注</view>
-</view>
-
 <view wx:for="{{ list }}" wx:key="item.id">
 <view class="list">
 	<view class="people">
@@ -26,7 +20,7 @@
 	</view>
 
 	<view class="img">
-		<view wx:for="{{ item.img }}" wx:key="index" wx:for-item="myItem">
+		<view wx:for="{{ item.img }}" wx:key="{{ index }}" wx:for-item="myItem">
 			<image src="{{ myItem }}" mode="aspectFill"></image>
 		</view>
 	</view>

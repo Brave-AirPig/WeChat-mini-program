@@ -2,6 +2,8 @@
 
 ![](https://img.shields.io/badge/%20%F0%9F%A6%84%20%20WeChat--mini--program%20%20-%20%20develop%20%20-orange)
 
+tips: 如果图片不显示，请将仓库 fork 🤓
+
 ---
 
 ## 项目背景
@@ -31,6 +33,7 @@
 - 路由跳转
 - 方法封装
 - 数据请求
+- 组件传值
 - 条件判断条件循环-视图层与逻辑层的交互
 
 1. 本地数据持久化
@@ -94,3 +97,5 @@ npm i weui-miniprogram
 如果你觉得该项目还不错的话，可以考虑请我我一杯咖啡 ☕ 😁
 
 ![赞赏码](./document/images/赞赏.jpg)
+
+![赞赏码](https://s1.ax1x.com/2022/11/15/zViDY9.jpg)

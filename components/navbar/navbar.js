@@ -1,10 +1,10 @@
-const app = getApp()
+const APP = new getApp()
 Component({
     data: {
-        navBarHeight: app.globalData.navBarHeight,
-        menuRight: app.globalData.menuRight,
-        menuTop: app.globalData.menuTop,
-        menuHeight: app.globalData.menuHeight,
+        navBarHeight: APP.globalData.navBarHeight,
+        menuRight: APP.globalData.menuRight,
+        menuTop: APP.globalData.menuTop,
+        menuHeight: APP.globalData.menuHeight,
     },
     methods: {
         navTo() {

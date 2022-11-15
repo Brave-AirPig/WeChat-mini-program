@@ -1,78 +1,72 @@
+const APP = new getApp()
+import requestData from '../../utils/api'
+
 Page({
     data: {
         programmingList: [],
-        acive: 0
+        acive: 0,
+        plateSelectList:[
+          {
+            id: 0,
+            title: '程序员星球'
+          },
+          {
+            id: 1,
+            title: '金融星球'
+          },
+          {
+            id: 2,
+            title: '其他星球'
+          }
+        ]
     },
-    aciveFunc(e) {
+    selectFunc(url) {
+      requestData.myRequest({ url:url })?.then(result => {
         this.setData({
-            acive: e.currentTarget.dataset.type
+          programmingList: result.data.list
         })
-        if(e.currentTarget.dataset.type == 0) {
-            this.myAjax('https://mock.mengxuegu.com/mock/6362115cffa946598c7427b3/example/programmingStar')
-        } else if(e.currentTarget.dataset.type == 1) {
-            this.myAjax('https://mock.mengxuegu.com/mock/6362115cffa946598c7427b3/example/moneyStar')
-        } else if(e.currentTarget.dataset.type == 2) {
-            this.myAjax('https://mock.mengxuegu.com/mock/6362115cffa946598c7427b3/example/otherStar')
-        }
+    })
     },
-    // 封装请求
-    myAjax(url) {
-        wx.showLoading({
-          title: '正在加载...'
+      // 监听选项卡切换点击事件
+      selectShowFunc(e) {
+        this.setData({
+          acive: e.currentTarget.dataset.type
         })
-        wx.request({
-            url: url,
-            success: res => {
-                this.setData({
-                    programmingList: res.data.list
-                })
-                wx.hideLoading({ })
-            }
+      // 选项卡列表切换
+      switch(e.currentTarget.dataset.type) {
+        case 0:
+          this.selectFunc('/programmingStar')
+          break;
+        case 1:
+          this.selectFunc('/moneyStar')
+          break;
+        case 2:
+          this.selectFunc('/otherStar')
+          break;
+        default:
+          wx.showToast({
+            title: '无效选项卡跳转',
+            icon: 'error',
+            duration: 1500
           })
-    },
+      }
+      },
     onLoad(options) {
-        this.myAjax('https://mock.mengxuegu.com/mock/6362115cffa946598c7427b3/example/programmingStar')
+        this.selectFunc('/programmingStar')
     },
-    onReady() {
-
-    },
-    onShow() {
-        // 如果有这个方法并且调用 getTabbar 可以调用这个实例
-        if(typeof this.getTabBar == 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-            // 第一页
-            selected: 1
-            })
-        }
-    },
-    onHide() {
-        if(typeof this.getTabBar == 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-                btn_show: false
-            })
-        }
-    },
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    }
+  // 页面跳转
+  onShow() {
+    APP.globalPageJump(this,()=>{
+     this.getTabBar().setData({
+       selected: 1
+      })
+    })
+  },
+onHide() {
+ APP.globalPageJump(this,()=>{
+   this.getTabBar().setData({
+     btn_show: false
+    })
+  })
+}
 })

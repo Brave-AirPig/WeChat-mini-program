@@ -17,4 +17,12 @@ App({
         menuTop: 0, // 胶囊距底部间距（保持底部间距一致）
         menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
     },
+    globalPageJump(_this,status){
+        // 如果全局有这个方法并且调用 getTabbar 可以调用这个实例
+        if(typeof _this.getTabBar == 'function' && _this.getTabBar()) {
+            status()
+        }else {
+            throw new Error("该页面并没有跳转业务")
+        }
+    }
 })

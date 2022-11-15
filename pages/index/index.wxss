@@ -136,3 +136,27 @@ swiper {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+/* 选项列表 */
+.select_list {
+	padding: 24rpx 0;
+	padding-bottom: 100px;
+}
+
+.select_title {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	padding: 24rpx;
+	padding-bottom: 0;
+	border-bottom: 1px solid #efefef;
+}
+
+.select_title view {
+	padding-bottom: 12rpx;
+}
+
+.select_title .show_view {
+	font-weight: bold;
+	border-bottom: 4px solid #000;
+}
